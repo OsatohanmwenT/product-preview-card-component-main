@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap');
+:root{
+--Darkcyan:hsl(158, 36%, 37%);
+--Cream:hsl(30, 38%, 92%);
+--Very-dark-blue: hsl(212, 21%, 14%);
+--Dark-grayish-blue: hsl(228, 12%, 48%);
+--White:hsl(0, 0%, 100%);
+}
+*,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    font-family: "Montserrat",sans-serif;
+    background-color: var(--Cream);
+}
+.wrapper{
+    max-width: 1134px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container{
+    background-color: white;
+    display: flex;
+    margin-top: 50px;
+    gap: 40px;
+    width: fit-content;
+    border-radius: 10px;
+}
+.container .left img{
+    height: 500px;
+    border-radius: 5px;
+}
+.container .left-mobile img{
+    display: none;
+}
+.container .right{
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    padding-right: 10px;
+}
+.container .right .info h4{
+    color: var(--Dark-grayish-blue);
+    font-family: "montserrat",sans-serif;
+    font-weight: 500;
+    word-spacing: 5px;
+}
+.container .right .info p{
+    color: var(--Dark-grayish-blue);
+    line-height: 25px;
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+.container .right .info h2{
+    font-size: 2.4rem;
+    font-family: "fraunces",sans-serif;
+}
+.container .right .price{
+    display: flex;
+    gap: 50px;
+    margin-top: 20px;
+    align-items: center;
+}
+.container .price .first{
+    font-size: 30px;
+    color: var(--Darkcyan);
+    font-family: "fraunces",sans-serif;
+}
+.container .price .second{
+    text-decoration: line-through;
+    color: var(--Dark-grayish-blue);
+}
+
+a.btn{
+    background-color: var(--Darkcyan);
+    color: var(--White);
+    font-family: "montserrat"sans-serif;
+    padding: 10px 22px;
+    font-weight: 700;
+    text-align: center;
+    border-radius: 10px;
+    margin-top: 30px;
+    text-decoration: none;
+    margin-right: 10px;
+}
+a.btn::before{
+    content: url(images/icon-cart.svg);
+    align-self: center;
+    margin-right: 10px;
+}
+.attribution{
+    margin-top: 50px;
+}
+.attribution a{
+text-decoration: none;
+}
+@media (max-width:500px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0px 0px 20px 0px;
+        gap: 0;
+        width: 400px;
+    }
+    .container .left-mobile img{
+        display: flex;
+        width:400px
+    }
+    .container .left img{
+        display: none;
+    }
+}
